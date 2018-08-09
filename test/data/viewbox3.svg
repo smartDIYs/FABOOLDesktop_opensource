@@ -1,0 +1,4 @@
+<svg width="200" height="200" viewBox="0 0 100 200" style="background: #ddd">
+  <circle cx="100" cy="100" r="50" fill="orange" />
+  <circle cx="0" cy="0" r="10" fill="blue" />
+</svg>

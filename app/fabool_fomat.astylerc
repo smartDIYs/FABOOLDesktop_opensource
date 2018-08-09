@@ -1,0 +1,6 @@
+mode=c
+style=1tbs
+indent=spaces=4
+indent-cases
+pad-oper
+add-one-line-braces
