@@ -2,10 +2,10 @@
 　本アプリは、PCからFABOOLLaserシリーズを操作するためのアプリです　　
 
 # 環境構築
-・Qt_opensource_5.11.1　http://download.qt.io/official_releases/qt/5.11/5.11.1/　　
+・Qt_opensource_5.9.6　https://download.qt.io/official_releases/qt/5.9/5.9.6/
 
 ※本アプリケーションはQt_OpenSource_5.8.0 MinGW版を使ってコンパイル・配布されていますが、<br>
-  Qtが5.8系の配布を終了してしまっているのでQt_OpenSource_5.11.1を使用するようにしてください<br>
+  Qtが5.8系の配布を終了してしまっているのでQt_OpenSource_5.9.6を使用するようにしてください<br>
 　Windows10 64bit PCにてコンパイル確認済みです　　
 
 ## Windows
