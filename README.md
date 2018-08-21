@@ -9,15 +9,15 @@
 　Windows10 64bit PCにてコンパイル確認済みです　　
 
 ## Windows
-・上記URLから”qt-opensource-windows-x86-5.11.1.exe”をダウンロード<br>
+・上記URLから”qt-opensource-windows-x86-5.9.6.exe”をダウンロード<br>
 ・インストーラを実行し、”コンポーネントの選択”にて下記コンポーネントにチェックを入れる<br>
-　ー　Qt/Qt 5.11.1/MinGW 5.3.0 32 bit <br>
+　ー　Qt/Qt 5.9.6/MinGW 5.3.0 32 bit <br>
 　ー　Tools/Qt Creator 4.6.2 CDB Debugger Support<br>
 　ー　Tools/MinGW 5.3.0　　<br>
 　　※　そのほかのコンポーネントは本アプリケーションのコンパイルに不要です<br>
 　　　　個人の必要に応じてインストールしてください<br>
 ## Mac
-　・インストーラ”qt-opensource-mac-x64-5.11.1.dmg”をダウンロード<br>
+　・インストーラ”qt-opensource-mac-x64-5.9.6.dmg”をダウンロード<br>
 　・あとはWindowsと同じ<br>
 
 # 注意
