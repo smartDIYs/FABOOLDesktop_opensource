@@ -743,7 +743,7 @@ bool SvgParser::calcBBox()
         return true;
     }
     m_stBBox.p1 = QPointF(FLT_MAX, FLT_MAX);
-    m_stBBox.p2 = QPointF(FLT_MIN, FLT_MIN);
+    m_stBBox.p2 = QPointF(-FLT_MAX, -FLT_MAX);
 
     for (int i = 0; i < m_listPath.length(); ++i) {
         if(m_listPath[i].isEmpty() == true) { continue; }

@@ -853,7 +853,7 @@ bool SvgPath::getBBox(ST_SVG_BBOX* pstBBox)
     }
 
     stMaxBBox.p1 = QPointF(FLT_MAX, FLT_MAX);
-    stMaxBBox.p2 = QPointF(FLT_MIN, FLT_MIN);
+    stMaxBBox.p2 = QPointF(-FLT_MAX, -FLT_MAX);
 
     for (int i = 0; i < m_listPathEle.length(); ++i) {
         if (m_listPathEle[i].getBBox(&stBBox) == false) {

@@ -205,7 +205,7 @@
 #define GCODE_PROCESS_START_HEADER      "G90\nM80\n"
 
 //Main View
-#define MAIN_VIEW_ZOOM_MIN 30
+#define MAIN_VIEW_ZOOM_MIN 10
 
 //Command Manager
 #define COMMAND_UNDO_STACK_MAX 20
