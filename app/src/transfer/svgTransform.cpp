@@ -73,12 +73,8 @@ bool SvgTransform::setTransform(const QString &strTransform, EN_SVG_UNIT enUnit,
         QRegularExpressionMatch match = i.next();
         QStringList list = match.captured(1).split('(');
         QString strFormKind = list.at(0).trimmed();
-        QStringList params = list.at(1).mid(0, list.at(1).length() - 1).split(',');
-        QStringList retParams;
-        foreach (QString param, params) {
-            retParams << param.split(" ");
-        }
-        getTransformValue(strFormKind, retParams, enUnit, dDpi);
+        QStringList params = list.at(1).mid(0, list.at(1).length() - 1).split(QRegExp(",|\\s"), QString::SkipEmptyParts);
+        getTransformValue(strFormKind, params, enUnit, dDpi);
     }
 
     return true;

@@ -55,8 +55,8 @@ public slots:
 
 private:
     QSpinBox*      mSpeedEdit;
-    QLineEdit*     mLaserPower;
-    QLineEdit*     mTimesEdit;
+    QSpinBox*      mLaserPower;
+    QSpinBox*      mTimesEdit;
     comboBox*      mUseTypeBox;
     lineColor*     mLineColor;
 
