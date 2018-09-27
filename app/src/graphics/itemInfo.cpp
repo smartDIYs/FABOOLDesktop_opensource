@@ -301,12 +301,14 @@ void ItemInfo::setItemToScene(QGraphicsScene* scene)
 {
     if(!scene) { return ; }
 
-    if(inWorkArea(scene->sceneRect()) == false) {
-        fixSizeAndPos(scene->sceneRect());
-    }
-
     if(GraphicsFlexibleFrame::Type == mItem->type()) {
         ((GraphicsFlexibleFrame*)mItem)->setToScene(scene);
+
+        if(inWorkArea(scene->sceneRect()) == false) {
+            fixSizeAndPos(scene->sceneRect());
+            update();
+            mItem->updateMatrix();
+        }
     }
 }
 

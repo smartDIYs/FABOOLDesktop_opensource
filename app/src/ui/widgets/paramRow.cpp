@@ -92,13 +92,14 @@ ParamRow::ParamRow(bool isRaster, ParamData* param, QObject* parent):
     connect(mSpeedEdit, SIGNAL(valueChanged(int)), this, SLOT(changed()));
 
 //　レーザー強度
-    mLaserPower = new QLineEdit();
-    QIntValidator* laserValidator = new QIntValidator(PATH_PARAMETER_LASER_MIN, PATH_PARAMETER_LASER_MAX, mLaserPower);
-    mLaserPower->setValidator(laserValidator);
-    mLaserPower->setText(QString::number(param->laserPower()));
+    mLaserPower = new QSpinBox();
+    mLaserPower->setStyleSheet(css);
+    mLaserPower->setSingleStep(10);
+    mLaserPower->setRange(PATH_PARAMETER_LASER_MIN, PATH_PARAMETER_LASER_MAX);
     mLaserPower->setAlignment(Qt::AlignRight);
     mLaserPower->setFrame(false);
-    connect(mLaserPower, SIGNAL(textChanged(QString)), this, SLOT(changed()));
+    mLaserPower->setValue(param->laserPower());
+    connect(mLaserPower, SIGNAL(valueChanged(int)), this, SLOT(changed()));
 
 //　切断・刻印
     mUseTypeBox = new comboBox(isRaster);
@@ -107,13 +108,14 @@ ParamRow::ParamRow(bool isRaster, ParamData* param, QObject* parent):
     connect(mUseTypeBox, SIGNAL(currentIndexChanged(int)), this, SLOT(changed()));
 
 //　走査回数
-    mTimesEdit  = new QLineEdit();
-    QIntValidator* timeValidator = new QIntValidator(PATH_PARAMETER_PROCESS_MIN, PATH_PARAMETER_PROCESS_MAX, mTimesEdit);
-    mTimesEdit->setValidator(timeValidator);
-    mTimesEdit->setText(QString::number(param->processTimes()));
+    mTimesEdit  = new QSpinBox();
+    mTimesEdit->setStyleSheet(css);
+    mTimesEdit->setSingleStep(1);
+    mTimesEdit->setRange(PATH_PARAMETER_PROCESS_MIN, PATH_PARAMETER_PROCESS_MAX);
     mTimesEdit->setAlignment(Qt::AlignRight);
     mTimesEdit->setFrame(false);
-    connect(mTimesEdit, SIGNAL(textChanged(QString)), this, SLOT(changed()));
+    mTimesEdit->setValue(param->processTimes());
+    connect(mTimesEdit, SIGNAL(valueChanged(int)), this, SLOT(changed()));
 }
 
 ParamRow::~ParamRow()
@@ -172,8 +174,8 @@ int ParamRow::setBackParam()
 void ParamRow::updateParam()
 {
     mSpeedEdit->setValue(mPara->headSpeed());
-    mLaserPower->setText(QString::number(mPara->laserPower()));
-    mTimesEdit->setText(QString::number(mPara->processTimes()));
+    mLaserPower->setValue(mPara->laserPower());
+    mTimesEdit->setValue(mPara->processTimes());
     mUseTypeBox->setCurrentIndex((PARAM_USE_TYPE)(mPara->useType()));
 }
 
